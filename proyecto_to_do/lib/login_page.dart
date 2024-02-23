@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'guardarlista.dart';
+import 'home_screen.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -53,16 +53,12 @@ class _LoginPageState extends State<LoginPage> {
   Widget _icon() {
     return Container(
       decoration: BoxDecoration(
-          image: DecorationImage(
-              image: NetworkImage(
-                  "https://play-lh.googleusercontent.com/-uScmz-qtagHb074sElxtAhyiDNN6YO-hD9UTaqwGgOOM2G5nIyxsuB_uxNQ-N0-bTU=w240-h480-rw"),
-              fit: BoxFit.cover),
           border: Border.all(color: Colors.white, width: 2),
           shape: BoxShape.circle),
       child: const Icon(
         Icons.person,
-        color: Colors.transparent,
-        size: 130,
+        color: Colors.white,
+        size: 120,
       ),
     );
   }
@@ -91,7 +87,7 @@ class _LoginPageState extends State<LoginPage> {
         debugPrint("Nombre: " + usernameController.text);
         debugPrint("password: " + passwordController.text);
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => guardarlista()));
+            context, MaterialPageRoute(builder: (context) => HomeScreen()));
       },
       child: const SizedBox(
           width: double.infinity,
